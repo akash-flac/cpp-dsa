@@ -1,30 +1,26 @@
 #include<iostream>
 using namespace std;
 
-int main(){
-  int n;
-  cin >> n;
-
-  int i = 1;
-
-while(i<=n){
-    int j = 1;
-   
-   while( j <= (n-i) )
+int findUnique(int arr[], int length){
+    
+    int ans = 0;
+    for(int i = 0; i < length; i++)
     {
-        cout << " - " ;
-        j++; 
+       ans = ans^arr[i];
     }
-     
-    while ( j <= i ) {
-    cout << " # " ;
-    j = j+1;
-        
-    }
-
-    cout << endl ;
-    i = i+1;
-        
+    return ans;
 }
+//void printArray(int arr[], int length){
+//    for(int i = 0; i < length; i++)
+//    {
+//        cout << arr[i] ;
+//    }
+//}
+
+
+int main(){
+    int a[5] = {1,1,2,5,5};
+    cout << findUnique(a, 5) ;
+    //printArray(a, 5);
 
 }
