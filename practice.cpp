@@ -1,9 +1,12 @@
 #include<iostream>
+#include<math.h>
 using namespace std;
 
 int main(){
-    int n ; 
+    int n; 
+    cout << "Enter an integer : ";
     cin >> n;
-    cout << ~n;
+    cout << ~n ;
+
     
 }
