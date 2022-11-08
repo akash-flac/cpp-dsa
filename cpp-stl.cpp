@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include<map>
 using namespace std;
 void Pair(){
         pair<int, int> p = {1,3};
@@ -52,13 +53,23 @@ void Pair(){
         map<int, int>mpp; //map<"key", "value">mpp
 
         mpp[1] = 2;
-        mpp.emplace({3, 1});
+        //mpp.emplace({3, 1});
         mpp.insert({2, 4});
-        mpp[{2, 3}] = 10;
+        //mpp[{2, 3}] = 10;
 
         for(auto it : mpp)
         {
-            cout << it.first << " " << it.second << endl ;
+            cout << it.first << "->" << it.second << endl ;
+        }
+
+        map<int, list<int>>mpp2;
+        mpp2[1].push_back(5);
+        for(auto i : mpp2)
+        {
+            cout << i.first << " , " ;
+            for(auto j : i.second)
+                cout << j << endl;
+
         }
     }
 
@@ -66,6 +77,7 @@ int main(){
 
     //Pair();
     //Vector();
+    Map();
 
     
 }
