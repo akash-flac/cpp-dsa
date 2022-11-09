@@ -47,7 +47,7 @@ void quickSort(int arr[], int s, int e) {
     if(s >= e) 
         return ;
 
-    //partitioon karenfe
+    //partition karenge
     int p = partition(arr, s, e);
 
     //left part sort karo
@@ -60,15 +60,17 @@ void quickSort(int arr[], int s, int e) {
 
 int main() {
 
-    int arr[10] = {2,4,1,6,9 ,9,9,9,9,9};
-    int n = 10;
+    int arr[5] = {4, 8, 9, 15, 4};
+    int n = 5;
 
     quickSort(arr, 0, n-1);
 
     for(int i=0; i<n; i++) 
     {
         cout << arr[i] << " ";
-    } cout << endl;
+    } 
+    
+    cout << endl;
 
 
     return 0;
