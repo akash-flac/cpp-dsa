@@ -1,4 +1,5 @@
 #include<iostream>
+#include<queue>
 using namespace std;
 
 class heap{
@@ -139,7 +140,56 @@ int main(){
     }
     cout << endl;
 
-    return 0;
+    cout << "USING PRIORITY QUEUE HERE" << endl;
+    
+    //maxheap
+    priority_queue<int> pq;
+
+    pq.push(4);
+    pq.push(6);
+    pq.push(3);
+    pq.push(9);
+
+    cout << "Element at Top : " << pq.top() << endl;
+    pq.pop();
+
+    cout << "Element at Top : " << pq.top() << endl;
+
+    cout << "Size is : " << pq.size() << endl;
+
+    if(pq.empty()){
+        cout << "pq is empty" << endl;
+    }
+    else{
+        cout << "pq is not empty" << endl;
+    }
+
+    //minheap
+    priority_queue<int, vector<int>, greater<int> > minheap ;
+
+    minheap.push(4);
+    minheap.push(6);
+    minheap.push(3);
+    minheap.push(9);
+
+    cout << "Element at Top : " << minheap.top() << endl;
+    minheap.pop();
+
+    cout << "Element at Top : " << minheap.top() << endl;
+
+    cout << "Size is : " << minheap.size() << endl;
+
+    if(minheap.empty()){
+        cout << "pq is empty" << endl;
+    }
+    else{
+        cout << "pq is not empty" << endl;
+    }
+
+
+
+
+
 
 
 
@@ -147,4 +197,4 @@ int main(){
 
 }
 
-//TimeComplexity = O(logn);
+//TimeComplexityofHeapSort = O(nlogn);
