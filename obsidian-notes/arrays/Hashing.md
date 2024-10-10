@@ -1,0 +1,16 @@
+- Striver's video link: https://youtu.be/KEs5UyBJ39g?si=d3fuPQIMOaU37s9r
+- prestoring/fetching
+- int hash array
+	- max hash array size
+		- inside main function: 10^6
+		- globally : 10^7
+- character hash array :
+	- can do `ch - 'a'` to map characters to a hash array of size 26(0-25 indices)
+	- else, if the range of characters is not known, just make a hash array of size 256 as there are 256 characters and the character will automatically be mapped to the correct index based on its ASCII value
+- use stl : map/unordered_map
+	- time complexity of map: storing/fetching takes O(n) in all cases(best, worst, avg)
+	- time complexity of map: 
+		- storing/fetching - O(1) in for avg and best cases, but O(n) for worst case
+- hashing theory
+	- division method
+	- chaining
