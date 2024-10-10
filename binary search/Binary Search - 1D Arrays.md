@@ -376,8 +376,8 @@ int findMin(vector<int>& nums) {
 
 ```
 
-![[Pasted image 20240816140652.png]]
+![](attachments/Pasted%20image%2020240816140652.png)
 
-![[Pasted image 20240816140739.png]]
+![](attachments/Pasted%20image%2020240816140739.png)
 
 

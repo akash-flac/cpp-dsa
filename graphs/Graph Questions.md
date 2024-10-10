@@ -2,9 +2,9 @@
 https://leetcode.com/problems/number-of-provinces/description/
 
 Here, we just have to find the count of the components of the graph.
-![[Pasted image 20240703002258.png]]
+![](attachments/Pasted%20image%2020240703002258.png)
 
-![[Pasted image 20240703004450.png]]
+![](attachments/Pasted%20image%2020240703004450.png)
 
 2. Course Schedule I
 https://leetcode.com/problems/course-schedule/description/
@@ -142,9 +142,9 @@ vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
 4. Find Eventual Safe States
 https://leetcode.com/problems/find-eventual-safe-states/description/
 
-- ==USING CYCLE DETECTION==
+- **USING CYCLE DETECTION**
 
-![[Pasted image 20240705172853.png]]
+![](attachments/Pasted%20image%2020240702194753.png)
 - *Explanation of Variables and Logic*
 
 1. **Graph Representation (`g`)**: The graph is represented as an adjacency list, where `g[i]` contains all nodes that can be reached directly from node `i`.
@@ -169,8 +169,8 @@ https://leetcode.com/problems/find-eventual-safe-states/description/
 
 By the end of the process, `eventualSafeNodes` returns a list of nodes that are safe, meaning they do not lead to any cycles when starting from them.
 
-- ==USING TOPOLOGICAL SORT==
-![[Pasted image 20240705174923.png]]
+- **USING TOPOLOGICAL SORT**
+![](attachments/Pasted%20image%2020240705174923.png)
 
 - *Explanation*
 1. **Reverse the Graph**: Reverse all the edges in the graph.

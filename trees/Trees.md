@@ -1,3 +1,16 @@
+# Key Terms
+- Node
+- Root
+- Children
+- Parent Node
+- Leaf Node
+- Subtree
+- Ancestor
+- Full Binary Tree: Either 0 or 2 children
+- Complete Binary Tree: All levels are completely filled except the last level, the last level has all the nodes as left as possible
+- Perfect Binary Tree: all leaf nodes are at the same level
+- Balanced Binary Tree: Height of tree at max log(n) where n = nodes
+- Degenerate Tree: Every node has only one child node 
 # Binary Tree Representation in C++
 
 ```cpp
@@ -233,5 +246,101 @@ vector<vector<int>> levelOrder(TreeNode* root) {
         return ans;
     }
 ```
+
+# Morris Traversal
+## Inorder
+```cpp
+class Solution {
+    //morris traversal
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+
+        vector<int> ans;
+
+        while(root){
+
+            //Left part doesn't exist
+
+            if(root->left == NULL){
+
+                ans.push_back(root->val);
+
+                root=root->right;
+            }
+            //Left part exists
+            else{
+                TreeNode *curr = root->left;
+                while(curr->right && curr->right != root)
+                    curr = curr->right;
+                //if left subtree not traversed
+                if(curr->right == NULL){
+
+                    curr->right = root;
+
+                    root = root->left;
+                }
+                //left subtree already traversed
+                else{
+
+                    curr->right = NULL;
+
+                    ans.push_back(root->val);
+
+                    root = root->right;
+                }
+            }
+        }
+        return ans;
+    }
+};
+```
+
+We check if the left subtree exists or not from the root. 
+If it doesn't, then we just print the value of the current node and move towards the right subtree. 
+If it does, then we check further if the left subtree has been traversed or not. 
+	If the left subtree is not traversed, i.e. the rightmost node of the left subtree points to NULL and not to the root, then we create a link(or a thread) from that node to the root, and move the root to it's left node(root = root->left).
+	Else if the left subtree has already been traversed, i.e. the rightmost node of the left subtree points to the root, then we remove the link, store the value of the node
+
+![](attachments/Pasted%20image%2020241006180958.png)
+
+## PreOrder
+```cpp
+class Solution {
+    //morris traversal
+public:
+    vector<int> preorderTraversal(TreeNode* root) {
+        vector<int> ans;
+
+        while(root){
+            //Left part doesn't exist
+            if(root->left == NULL){
+                ans.push_back(root->val);
+                root=root->right;
+            }
+            //Left part exists
+            else{
+                TreeNode *curr = root->left;
+                while(curr->right && curr->right != root)
+                    curr = curr->right;
+                //if left subtree not traversed
+                if(curr->right == NULL){
+                    ans.push_back(root->val);
+                    curr->right = root;
+                    root = root->left;
+                }
+                //left subtree already traversed
+                else{ 
+                    curr->right = NULL;
+                    root = root->right;
+                }
+            }
+        }
+
+        return ans;
+    }
+```
+
+It's similar to inorder. The only change is that, we push the value of the current node when the left subtree has not been traversed yet(Root, Left, Right).
+![](attachments/Pasted%20image%2020241006182225.png)
 
 

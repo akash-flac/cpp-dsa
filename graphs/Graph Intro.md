@@ -58,11 +58,11 @@ Graphs -  Directed or Undirected
 	return false;
 	}
 ```
-![[Pasted image 20240701180119.png]]
+![](attachments/Pasted%20image%2020240701180119.png)
 
 - Using BFS
 
-  ![[Pasted image 20240702115449.png]]
+  ![](attachments/Pasted%20image%2020240702115449.png)
   
 
 - Cycle Detection in a Directed Graph
@@ -148,10 +148,10 @@ bool isCyclic(int N, vector<int> adj[]) {
 ```
 - Topological Sorting
 	- Using DFS 
-	![[Pasted image 20240702194753.png]]
+	![](attachments/Pasted%20image%2020240702194753.png)
 	
 	- Using BFS(Kahn's Algorithm)
-	![[Pasted image 20240702190155.png]]
+	![](attachments/Pasted%20image%2020240702190155.png)
 	
 - DSU
 	- By Union
@@ -168,9 +168,9 @@ https://leetcode.com/problems/is-graph-bipartite/description/
 ## Shortest Path Algorithms
 ### Dijkstra's Algorithm
 - Using Priority Queue
-![[Pasted image 20240706172848.png]]
+![](attachments/Pasted%20image%2020240706172848.png)
 
 - Using Set 
-![[Pasted image 20240706175823.png]]
+![](attachments/Pasted%20image%2020240706175823.png)
 
 

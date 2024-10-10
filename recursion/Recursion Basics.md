@@ -3,7 +3,7 @@ F(i) = F(i-1) + F(i-2).
 
 Recursion is the process of defining a problem (or the solution to a problem) in terms of (a simpler version of) itself.
 
-![[Pasted image 20240618172215.png]]
+![](attachments/Pasted%20image%2020240618172215.png)
 
 Simple ways to build a recursive solution:
 - Deciding the base case, i.e. the output for the simplest possible input/set of inputs

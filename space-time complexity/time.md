@@ -1,8 +1,8 @@
-![[Complexity Chart.png]]
+![](attachments/Complexity%20Chart.png)
 
-![[Data Structures.png]]
+![](attachments/Data%20Structures.png)
 
-![[Data Structures Selection.png]]
+![](attachments/Data%20Structures%20Selection.png)
 
 ### Time Complexity Analysis of Binary Search
 
