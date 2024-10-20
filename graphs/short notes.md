@@ -1,0 +1,48 @@
+graph representation:
+- adjacency matrix
+- adjacency list
+
+- graph traversals:
+	- bfs
+		- declare a `vis` array, and a `queue`.
+		- start the bfs from the source vertex, and put it's adjacent vertices in the queue
+		- as soon as the vertex is pushed into the queue, mark it as visited by marking `vis` array as 1.
+		- use a `ans` vector to store the order of the bfs.
+	- dfs
+		- dfs utilizes a recursive function 
+		- the recursive function `dfs` is called with the source vertex
+		- if the current vertex has already been traversed(i.e. it's index in the `vis` array is marked 1), we return without going further in the traversal
+		- if the current vertex has not been traversed, then we mark it as visited, and then check if any of it's adjacent nodes are not visited, and if they aren't visited, then call the recursive function dfs for that vertex.
+		- use a `ans` vector to store the order of the dfs.
+	
+- cycle detection
+	- undirected graph
+		- **using bfs**
+			- we use a queue of `pair<int, int>` where we store elements in the format of `<node, parent>` and initially the parent is -1.
+			- we traverse the graph using bfs, and
+				- if any of the adjacent nodes of the current node is not marked visited, then we push that node into queue, along with the current node as parent, and push it into the queue.
+				- if any of the adjacent nodes is marked visited, but that node is not parent, then there is a cycle and we return true
+		- **using dfs**
+			- we use the same `parent` concept that we use in cycle detection using bfs
+	- directed graph
+		- using bfs(kahn's algorithm)
+		- using dfs
+- topological sorting
+	- using bfs(kahn's algo)
+	- using dfs
+- shortest path 
+	- shortest path in ug with unit weights
+	- shortest path in DAG
+	- shortest path in ug with varying weights(Dijkstra's Algo)
+	- bellman-ford algo(dijkstra with negative cycle)
+	- floyd-warshall algo(all pairs shortest path)
+- min spanning tree
+	- prim's algo
+	- kruskal's algo(use DSU)
+- disjoint sets and union(dsu)
+	- union by rank
+	- union by size
+- others
+	- bridges in a graph
+	- articulation point
+	- kosaraju's algorithm

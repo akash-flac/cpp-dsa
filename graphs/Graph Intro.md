@@ -61,8 +61,44 @@ Graphs -  Directed or Undirected
 ![](attachments/Pasted%20image%2020240701180119.png)
 
 - Using BFS
-
-  ![](attachments/Pasted%20image%2020240702115449.png)
+```cpp
+bool bfs(vector<vector<int>>& adj, int i, vector<bool>&vis){
+        queue<pair<int, int>> q;
+        
+        q.push({i, -1});
+        vis[i] = true;
+        
+        while(!q.empty()){
+            auto it = q.front();
+            q.pop();
+            int node = it.first;
+            int parent = it.second;
+            
+            for(int &v : adj[node]){
+                if(!vis[v]){
+                    vis[v] = true;
+                    q.push({v, node});
+                }
+                else if(v != parent){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
+    bool isCycle(vector<vector<int>> adj) {
+        int v = adj.size();
+        vector<bool> vis(v, 0);
+        
+        for(int i=0; i<v; i++){
+            if(!vis[i]){
+                if(bfs(adj, i, vis)) return true;
+            }
+        }
+        return false;
+    }
+```
   
 
 - Cycle Detection in a Directed Graph

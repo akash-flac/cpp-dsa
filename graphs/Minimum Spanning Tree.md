@@ -1,5 +1,5 @@
-==Spanning Tree== : A tree where we have 'n' nodes and 'n-1' edges, and all nodes are reachable from each other. 
-==Minimum Spanning Tree== : It is the Spanning Tree with the minimum possible total edge weight among all the Spanning Trees of a Graph.
+**Spanning Tree** : A tree where we have 'n' nodes and 'n-1' edges, and all nodes are reachable from each other. 
+**Minimum Spanning Tree** : It is the Spanning Tree with the minimum possible total edge weight among all the Spanning Trees of a Graph.
 
 To find MST of a graph :
 - Prim's Algorithm
